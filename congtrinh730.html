@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biệt thự 730 Lã Xuân Oai — HPC</title>
+    <link rel="stylesheet" href="./HPCweb.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="./index.html" class="w3-bar-item w3-button"><b>HP</b> Construction</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#projects" class="w3-bar-item w3-button">Dự án</a>
+                <a href="#about" class="w3-bar-item w3-button">Về chúng tôi</a>
+                <a href="#contact" class="w3-bar-item w3-button">Liên hệ</a>
+            </div>
+            <!-- Mobile menu button -->
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                id="mobile-menu-toggle" aria-label="Mở menu">☰</a>
+            <div id="mobile-menu" class="w3-hide w3-white"
+                style="position:absolute; right:8px; top:56px; z-index:5; min-width:160px;">
+                <a href="#projects" class="w3-bar-item w3-button">Dự án</a>
+                <a href="#about" class="w3-bar-item w3-button">Về chúng tôi</a>
+                <a href="#contact" class="w3-bar-item w3-button">Liên hệ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (Tailwind hero) -->
+    <header id="home" class="pb-12">
+        <div class="relative w-full h-screen">
+            <!-- Background image -->
+            <img src="/images/image730_1.jpg" alt="Biệt thự 730 Lã Xuân Oai"
+                class="absolute inset-0 w-full h-full object-cover">
+
+            <!-- Overlay box (enlarged & responsive) -->
+            <div class="absolute bottom-20 right-20 bg-gray-700 text-white px-10 py-8 rounded-md w-[450px] shadow-xl">
+                <h1 class="text-2xl md:text-3xl font-bold uppercase">Biệt thự</h1>
+                <h2 class="text-xl md:text-2xl font-semibold mt-1">730 Lã Xuân Oai</h2>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-10xl mx-auto px-8 md:px-12 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
+            <!-- Cột trái -->
+            <div>
+                <img src="/images/image730_2.jpg" alt="Dự án Sycamore" class="w-full object-cover rounded-md shadow-md">
+
+                <div class="mt-6">
+                    <h2 class="text-2xl font-semibold text-black-900">Địa điểm: 730/62 Lã Xuân Oai, Long Trường, Thủ
+                        Đức, Hồ Chí Minh, Việt Nam</h2>
+                </div>
+            </div>
+
+            <!-- Cột phải -->
+            <div class="space-y-6">
+
+                <!-- Thông tin khách hàng -->
+                <div class="border-b pb-2">
+                    <p class="text-sm text-gray-500 uppercase">Khách hàng</p>
+                    <p class="text-lg font-semibold"></p>
+                </div>
+
+                <!-- Loại hình dự án -->
+                <div class="border-b pb-2">
+                    <p class="text-sm text-gray-500 uppercase">Loại hình dự án</p>
+                    <p class="text-lg font-semibold">Biệt thự nhà phố
+                    </p>
+                </div>
+
+                <!-- Địa điểm -->
+                <div class="border-b pb-2">
+                    <p class="text-sm text-gray-500 uppercase">Địa điểm</p>
+                    <p class="text-lg font-semibold">Thủ Đức</p>
+                </div>
+
+                <!-- Trạng thái -->
+                <div class="border-b pb-2">
+                    <p class="text-sm text-gray-500 uppercase">Trạng thái</p>
+                    <p class="text-lg font-semibold">Chờ khánh thành</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div class="px-10 pt-12 pb-24">
+        <!-- Tiêu đề -->
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-4xl font-bold tracking-wide border-b border-black pb-2">
+                ẢNH TỪ DỰ ÁN
+            </h2>
+            <div class="flex space-x-4">
+                <button class="px-2 py-1 border rounded-full hover:bg-gray-100">←</button>
+                <button class="px-2 py-1 border rounded-full hover:bg-gray-100">→</button>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Ảnh 1 -->
+            <div class="border border-gray-300">
+                <img src="./images/image730_3.jpg" alt="Ảnh 1" class="w-full h-[450px] object-cover" />
+            </div>
+            <!-- Ảnh 2 -->
+            <div class="border border-gray-300">
+                <img src="./images/image730_4.jpg" alt="Ảnh 2" class="w-full h-[450px] object-cover" />
+            </div>
+            <!-- Ảnh 3 -->
+            <div class="border border-gray-300">
+                <img src="./images/image730_5.jpg" alt="Ảnh 3" class="w-full h-[450px] object-cover" />
+            </div>
+        </div>
+    </div>
+    <footer style="background:#111; color:#eee; position:relative;">
+        <div
+            style="max-width:1200px; margin:auto; padding:48px 24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:32px;">
+            <!-- Logo + Giới thiệu -->
+            <div>
+                <img src="/images/team2.jpg" alt="HPC Logo"
+                    style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:16px; background:#fff;">
+                <p style="color:#bbb; font-size:15px; line-height:1.7;">Công ty HPC hoạt động trong lĩnh vực thiết kế
+                    kiến trúc và xây dựng. Đội ngũ kiến trúc sư, kỹ sư giàu kinh nghiệm, sáng tạo, cam kết mang đến giải
+                    pháp tối ưu cho các công trình dân dụng, công nghiệp, văn phòng, cửa hàng, trường học và các dự án
+                    lớn khác.</p>
+                <div style="display:flex; gap:12px; margin-top:18px;">
+                    <a href="#"
+                        style="background:#2563eb; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;"
+                        title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:info@hpc.com"
+                        style="background:#444; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;"
+                        title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+84973974875"
+                        style="background:#22c55e; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;"
+                        title="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <!-- Thông tin liên hệ -->
+            <div>
+                <h3 style="font-weight:600; font-size:18px; margin-bottom:16px;">THÔNG TIN LIÊN HỆ</h3>
+                <p style="color:#bbb; margin-bottom:10px;"><i class="fas fa-map-marker-alt"
+                        style="margin-right:8px;"></i> 730/32 Lã Xuân Oai, Quận 9, TP.HCM</p>
+                <p style="color:#bbb; margin-bottom:10px;"><i class="fas fa-phone" style="margin-right:8px;"></i> (+84)
+                    899225583</p>
+                <p style="color:#bbb;"><i class="fas fa-envelope" style="margin-right:8px;"></i> info@hpc.com</p>
+            </div>
+            <!-- Lý do chọn -->
+            <div>
+                <h3 style="font-weight:600; font-size:18px; margin-bottom:16px;">LÝ DO CHỌN HPC</h3>
+                <p style="color:#bbb; line-height:1.7;">HPC đã hoàn thành hàng trăm dự án lớn nhỏ, cam kết mang lại sự
+                    hài lòng và giá trị bền vững cho khách hàng.</p>
+            </div>
+        </div>
+        <div style="text-align:center; padding:18px 0; border-top:1px solid #222; color:#888; font-size:14px;">© hpc.com
+        </div>
+    </footer>
+</body>
+
+</html>
