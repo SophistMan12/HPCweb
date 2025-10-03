@@ -7,6 +7,58 @@
     <title>Biệt thự 730 Lã Xuân Oai — HPC</title>
     <link rel="stylesheet" href="./HPCweb.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Mobile header adjustments */
+        @media (max-width: 640px) {
+
+            /* Make the fixed top bar smaller */
+            .w3-top .w3-bar {
+                padding: 6px 10px !important;
+            }
+
+            .w3-top .w3-bar .w3-bar-item {
+                padding: 6px 8px !important;
+            }
+
+            /* Hide desktop links and ensure mobile menu button is visible */
+            .w3-right.w3-hide-small {
+                display: none !important;
+            }
+
+            .w3-hide-large.w3-hide-medium {
+                display: inline-block !important;
+            }
+
+            /* Prevent navbar overlap by adding body top padding equal to bar height */
+            body {
+                padding-top: 56px !important;
+            }
+
+            /* Reduce hero height so it fits on small screens */
+            header .relative.w-full.h-screen {
+                height: 60vh !important;
+            }
+
+            /* Make the overlay box full width and flow in document on small screens */
+            .hero-overlay {
+                position: static !important;
+                right: auto !important;
+                bottom: auto !important;
+                left: auto !important;
+                margin: 12px !important;
+                width: calc(100% - 24px) !important;
+                padding: 12px !important;
+            }
+
+            .hero-overlay h1 {
+                font-size: 1.25rem !important;
+            }
+
+            .hero-overlay h2 {
+                font-size: 1rem !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -14,7 +66,10 @@
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-            <a href="./index.html" class="w3-bar-item w3-button"><b>HP</b> Construction</a>
+            <a href="./index.html" class="w3-bar-item w3-button" aria-label="HP Construction home" style="padding:0;">
+                <img src="/images/LogoHPC.jpg" alt="HPC Construction logo"
+                    style="height:36px; width:auto; border-radius:6px; display:block;">
+            </a>
             <!-- Float links to the right. Hide them on small screens -->
             <div class="w3-right w3-hide-small">
                 <a href="#projects" class="w3-bar-item w3-button">Dự án</a>
@@ -34,18 +89,53 @@
     </div>
 
     <!-- Header (Tailwind hero) -->
-    <header id="home" class="pb-12">
-        <div class="relative w-full h-screen">
-            <!-- Background image -->
-            <img src="/images/image730_1.jpg" alt="Biệt thự 730 Lã Xuân Oai"
-                class="absolute inset-0 w-full h-full object-cover">
-
-            <!-- Overlay box (enlarged & responsive) -->
-            <div class="absolute bottom-20 right-20 bg-gray-700 text-white px-10 py-8 rounded-md w-[450px] shadow-xl">
-                <h1 class="text-2xl md:text-3xl font-bold uppercase">Biệt thự</h1>
-                <h2 class="text-xl md:text-2xl font-semibold mt-1">730 Lã Xuân Oai</h2>
-            </div>
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+        <img class="w3-image" src="/images/image730_1.jpg" alt="Kiến trúc - HPC Construction" width="1500" height="800"
+            loading="lazy">
+        <div
+            class="absolute bottom-20 right-20 bg-gray-700 text-white px-10 py-8 rounded-md w-[450px] shadow-xl hero-overlay">
+            <h1 class="text-2xl md:text-3xl font-bold uppercase">Biệt thự</h1>
+            <h2 class="text-xl md:text-2xl font-semibold mt-1">730 Lã Xuân Oai</h2>
         </div>
+        <style>
+            @media (max-width: 640px) {
+
+                /* Reduce navbar padding and logo size on small screens */
+                .w3-top .w3-bar {
+                    padding: 6px 10px !important;
+                }
+
+                .w3-top .w3-bar img {
+                    height: 30px !important;
+                }
+
+                /* Ensure desktop nav links are hidden on small screens (defensive) */
+                .w3-right.w3-hide-small {
+                    display: none !important;
+                }
+
+                /* Prevent the fixed top bar from overlapping content */
+                body {
+                    padding-top: 56px !important;
+                }
+
+                /* Header text adjustments */
+                header .w3-display-middle h1 {
+                    font-size: 2.2rem !important;
+                }
+
+                /* Move headline slightly higher/lower to fit better on phones */
+                header .w3-display-middle {
+                    top: 38% !important;
+                    transform: translateY(-38%);
+                }
+
+                /* Hide slogan on small screens to reduce vertical clutter */
+                header .slogan-text {
+                    display: none !important;
+                }
+            }
+        </style>
     </header>
 
     <main class="max-w-10xl mx-auto px-8 md:px-12 py-20">
@@ -96,11 +186,7 @@
         <!-- Tiêu đề -->
         <div class="flex justify-between items-center mb-4">
             <h2 class="text-4xl font-bold tracking-wide border-b border-black pb-2">
-                ẢNH TỪ DỰ ÁN            </h2>
-            <div class="flex space-x-4">
-                <button class="px-2 py-1 border rounded-full hover:bg-gray-100">←</button>
-                <button class="px-2 py-1 border rounded-full hover:bg-gray-100">→</button>
-            </div>
+                ẢNH TỪ DỰ ÁN </h2>
         </div>
 
         <!-- Gallery -->
@@ -124,22 +210,26 @@
             style="max-width:1200px; margin:auto; padding:48px 24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:32px;">
             <!-- Logo + Giới thiệu -->
             <div>
-                <img src="/images/team2.jpg" alt="HPC Logo"
+                <img src="/images//LogoHPC.jpg" alt="HPC Logo"
                     style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:16px; background:#fff;">
                 <p style="color:#bbb; font-size:15px; line-height:1.7;">Công ty HPC hoạt động trong lĩnh vực thiết kế
                     kiến trúc và xây dựng. Đội ngũ kiến trúc sư, kỹ sư giàu kinh nghiệm, sáng tạo, cam kết mang đến giải
                     pháp tối ưu cho các công trình dân dụng, công nghiệp, văn phòng, cửa hàng, trường học và các dự án
                     lớn khác.</p>
                 <div style="display:flex; gap:12px; margin-top:18px;">
-                    <a href="#"
-                        style="background:#2563eb; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;"
-                        title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="mailto:info@hpc.com"
-                        style="background:#444; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;"
-                        title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+84973974875"
-                        style="background:#22c55e; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;"
-                        title="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="#" aria-label="Facebook" title="Facebook"
+                        style="background:#2563eb; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="mailto:info@hpc.com" aria-label="Email" title="Email"
+                        style="background:#444; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+84973974875" aria-label="Phone" title="Phone"
+                        style="background:#22c55e; width:36px; height:36px; display:flex; align-items:center; justify-content:center; border-radius:50%; color:#fff; font-size:18px; text-decoration:none;">
+                        <i class="fas fa-phone"></i>
+                    </a>
                 </div>
             </div>
             <!-- Thông tin liên hệ -->
@@ -161,6 +251,9 @@
         <div style="text-align:center; padding:18px 0; border-top:1px solid #222; color:#888; font-size:14px;">© hpc.com
         </div>
     </footer>
+    <!-- Font Awesome for social icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -23,7 +23,10 @@
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-            <a href="#home" class="w3-bar-item w3-button"><b>HP</b> Construction</a>
+            <a href="#home" class="w3-bar-item w3-button" aria-label="HP Construction home" style="padding:0;">
+                <img src="/images/LogoHPC.jpg" alt="HPC Construction logo"
+                    style="height:36px; width:auto; border-radius:6px; display:block;">
+            </a>
             <!-- Float links to the right. Hide them on small screens -->
             <div class="w3-right w3-hide-small">
                 <a href="#projects" class="w3-bar-item w3-button">Dự án</a>
@@ -51,19 +54,38 @@
                 <span class="w3-padding w3-black w3-opacity-min"><b>HP</b></span>
                 <span class="w3-hide-small w3-text-light-grey">Construction</span>
             </h1>
-            <p class="slogan-text" style="font-size:2rem; color:#fff; margin-top:18px; text-shadow:0 2px 8px #222; font-weight:500;">
-                Xây dựng niềm tin – Kiến tạo tương lai
+            <p class="slogan-text"
+                style="font-size:2rem; color:#fff; margin-top:18px; text-shadow:0 2px 8px #222; font-weight:500;">
+                Đi từ thiết kế - xây dựng hoàn thiện
             </p>
         </div>
         <style>
             @media (max-width: 640px) {
+                /* Reduce navbar padding and logo size on small screens */
+                .w3-top .w3-bar {
+                    padding: 6px 10px !important;
+                }
+                .w3-top .w3-bar img {
+                    height: 30px !important;
+                }
+
+                /* Ensure desktop nav links are hidden on small screens (defensive) */
+                .w3-right.w3-hide-small { display: none !important; }
+
+                /* Prevent the fixed top bar from overlapping content */
+                body { padding-top: 56px !important; }
+
+                /* Header text adjustments */
                 header .w3-display-middle h1 {
                     font-size: 2.2rem !important;
                 }
+
+                /* Move headline slightly higher/lower to fit better on phones */
+                header .w3-display-middle { top: 38% !important; transform: translateY(-38%); }
+
+                /* Hide slogan on small screens to reduce vertical clutter */
                 header .slogan-text {
-                    font-size: 1.1rem !important;
-                    padding: 0 10px;
-                    margin-top: 10px !important;
+                    display: none !important;
                 }
             }
         </style>
@@ -74,37 +96,46 @@
 
         <!-- Project Section (Tailwind grid layout) -->
         <section id="projects" class="w3-container w3-padding-32">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Các dự án</h3>
+            <h2 class="text-4xl font-bold tracking-wide border-b border-black pb-2">
+                CÁC DỰ ÁN </h2>
 
             <div class="mt-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                    <a href="./congtrinh730.html" class="project-card block border rounded overflow-hidden shadow-sm" aria-label="Biệt thự 730 Lã Xuân Oai">
-                        <img src="/images/AnhNha730.jpg" alt="Biệt thự 730 Lã Xuân Oai" class="w-full h-56 object-cover" loading="lazy">
+                    <a href="./congtrinh730.html" class="project-card block border rounded overflow-hidden shadow-sm"
+                        aria-label="Biệt thự 730 Lã Xuân Oai">
+                        <img src="/images/AnhNha730.jpg" alt="Biệt thự 730 Lã Xuân Oai" class="w-full h-56 object-cover"
+                            loading="lazy">
                         <div class="p-3">
                             <p class="text-xs uppercase tracking-wider text-gray-500">Biệt thự</p>
                             <h4 class="text-lg font-semibold mt-1">Biệt thự 730 Lã Xuân Oai</h4>
                         </div>
                     </a>
 
-                    <a href="#" class="project-card block border rounded overflow-hidden shadow-sm" aria-label="Nhà dân 630 Lã Xuân Oai">
-                        <img src="/images/AnhNha630.jpg" alt="Nhà dân 630 Lã Xuân Oai" class="w-full h-56 object-cover" loading="lazy">
+                    <a href="#" class="project-card block border rounded overflow-hidden shadow-sm"
+                        aria-label="Nhà dân 630 Lã Xuân Oai">
+                        <img src="/images/AnhNha630.jpg" alt="Nhà dân 630 Lã Xuân Oai" class="w-full h-56 object-cover"
+                            loading="lazy">
                         <div class="p-3">
                             <p class="text-xs uppercase tracking-wider text-gray-500">Nhà dân</p>
                             <h4 class="text-lg font-semibold mt-1">Nhà dân 630 Lã Xuân Oai</h4>
                         </div>
                     </a>
 
-                    <a href="#" class="project-card block border rounded overflow-hidden shadow-sm" aria-label="Nhà cải tạo">
-                        <img src="/images/AnhNhaVungTau.jpg" alt="Nhà cải tạo" class="w-full h-56 object-cover" loading="lazy">
+                    <a href="#" class="project-card block border rounded overflow-hidden shadow-sm"
+                        aria-label="Nhà cải tạo">
+                        <img src="/images/AnhNhaVungTau.jpg" alt="Nhà cải tạo" class="w-full h-56 object-cover"
+                            loading="lazy">
                         <div class="p-3">
                             <p class="text-xs uppercase tracking-wider text-gray-500">Cải tạo</p>
                             <h4 class="text-lg font-semibold mt-1">Nhà cải tạo</h4>
                         </div>
                     </a>
 
-                    <a href="#" class="project-card block border rounded overflow-hidden shadow-sm" aria-label="Nhà Vũng Tàu">
-                        <img src="/images/AnhNhaVungTau2.jpg" alt="Nhà Vũng Tàu" class="w-full h-56 object-cover" loading="lazy">
+                    <a href="#" class="project-card block border rounded overflow-hidden shadow-sm"
+                        aria-label="Nhà Vũng Tàu">
+                        <img src="/images/AnhNhaVungTau2.jpg" alt="Nhà Vũng Tàu" class="w-full h-56 object-cover"
+                            loading="lazy">
                         <div class="p-3">
                             <p class="text-xs uppercase tracking-wider text-gray-500">Biệt thự nghỉ dưỡng</p>
                             <h4 class="text-lg font-semibold mt-1">Nhà Vũng Tàu</h4>
@@ -117,7 +148,8 @@
 
         <!-- About Section -->
         <div class="w3-container w3-padding-32" id="about">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Giới thiệu</h3>
+            <h3 class="text-4xl font-bold tracking-wide border-b border-black pb-2">
+                GIỚI THIỆU </h3>
             <div style="display: flex; flex-wrap: wrap; align-items: stretch; min-height: 320px;">
                 <!-- Thông tin cá nhân -->
                 <div
@@ -129,13 +161,17 @@
                     <p class="w3-opacity" style="margin:0;">Giám đốc điều hành & Người sáng lập</p>
                     <p style="margin:12px 0 0 0; font-size:15px; color:#555;">Định hướng phát triển & dẫn dắt công ty.
                     </p>
-                    <button class="w3-button w3-light-grey w3-margin-top" style="width:100%; max-width:180px;">Liên
-                        hệ</button>
+                    <a href="http://zaloapp.com/qr/p/rfw9o1ghh3ru" target="_blank" rel="noopener noreferrer"
+                            title="Liên hệ qua Zalo">
+                    <button class="w3-button w3-light-grey w3-margin-top" style="width:100%; max-width:180px;">
+                        Liên hệ </button>
+                    </a>
                 </div>
                 <!-- Giới thiệu công ty -->
                 <div
                     style="flex: 1 1 300px; min-width: 260px; display: flex; flex-direction: column; justify-content: center; margin: 8px; padding: 32px 24px;">
-                    <p style="font-size:17px; color:#222; margin-bottom:18px;">Công ty Thương mại cổ phần kiến trúc - Xây dựng HPC (Huỳnh Phương Construction) chuyên tư vấn, thiết kế và thi công các công trình dân dụng
+                    <p style="font-size:17px; color:#222; margin-bottom:18px;">CÔNG TY CỔ PHẦN THIẾT KẾ KIẾN TRÚC VÀ XÂY
+                        DỰNG HPC (Huỳnh Phương Construction) chuyên tư vấn, thiết kế và thi công các công trình dân dụng
                         – công nghiệp. Đội ngũ kiến trúc sư, kỹ sư giàu kinh nghiệm, sáng tạo, luôn mang đến giải pháp
                         tối ưu và chất lượng cho từng dự án.</p>
                     <ul style="font-size:15px; color:#444; margin-bottom:18px; padding-left:18px;">
@@ -152,9 +188,10 @@
 
         <!-- Contact Section -->
         <div class="w3-container w3-padding-32" id="contact">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Liên hệ</h3>
+            <h3 class="text-4xl font-bold tracking-wide border-b border-black pb-2">
+                GIỚI THIỆU </h3>
             <div class="form-container">
-                <form>
+                <form id="contact-form">
                     <div class="form-row">
                         <label for="company">Tên công ty (bắt buộc)</label>
                         <input type="text" id="company" placeholder="Vui lòng nhập tên công ty của bạn" required>
@@ -184,6 +221,7 @@
                         <textarea id="request" placeholder="Nhập yêu cầu của bạn"></textarea>
                     </div>
                     <div class="form-row">
+                        <div id="contact-status" style="margin-bottom:8px;color:#0b6; display:none;"></div>
                         <button type="submit" class="submit-btn">Gửi</button>
                     </div>
                 </form>
@@ -199,13 +237,13 @@
     </div>
 
 
-    <!-- Footer mới kiểu Tailwind đơn giản, hiện đại -->
+    <!-- Footer-->
     <footer style="background:#111; color:#eee; position:relative;">
         <div
             style="max-width:1200px; margin:auto; padding:48px 24px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:32px;">
             <!-- Logo + Giới thiệu -->
             <div>
-                <img src="/images/AnhAnhPhuong.jpg" alt="HPC Logo"
+                <img src="/images//LogoHPC.jpg" alt="HPC Logo"
                     style="width:80px; height:80px; object-fit:cover; border-radius:12px; margin-bottom:16px; background:#fff;">
                 <p style="color:#bbb; font-size:15px; line-height:1.7;">Công ty HPC hoạt động trong lĩnh vực thiết kế
                     kiến trúc và xây dựng. Đội ngũ kiến trúc sư, kỹ sư giàu kinh nghiệm, sáng tạo, cam kết mang đến giải
@@ -268,6 +306,56 @@
     <!-- Font Awesome CDN (optional) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
         crossorigin="anonymous"></script>
+    <script>
+        // Contact form submission via fetch to /api/contact
+        (function () {
+            var form = document.getElementById('contact-form');
+            var statusEl = document.getElementById('contact-status');
+            if (!form) return;
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                statusEl.style.display = 'none';
+                var data = {
+                    company: document.getElementById('company').value,
+                    person: document.getElementById('person').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    zip: document.getElementById('zip').value,
+                    address: document.getElementById('address').value,
+                    request: document.getElementById('request').value
+                };
+                // Basic validation
+                if (!data.company || !data.person || !data.email) {
+                    statusEl.style.display = 'block';
+                    statusEl.style.color = '#b00';
+                    statusEl.textContent = 'Vui lòng điền đầy đủ các trường bắt buộc.';
+                    return;
+                }
+                statusEl.style.display = 'block';
+                statusEl.style.color = '#666';
+                statusEl.textContent = 'Đang gửi...';
+
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                }).then(function (res) {
+                    return res.json();
+                }).then(function (json) {
+                    if (json && json.ok) {
+                        statusEl.style.color = '#0a0';
+                        statusEl.textContent = 'Gửi thành công. Chúng tôi sẽ liên hệ lại sớm.';
+                        form.reset();
+                    } else {
+                        throw new Error((json && json.error) || 'Lỗi máy chủ');
+                    }
+                }).catch(function (err) {
+                    statusEl.style.color = '#b00';
+                    statusEl.textContent = 'Gửi thất bại: ' + (err.message || err);
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>
